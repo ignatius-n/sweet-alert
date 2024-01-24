@@ -2,9 +2,9 @@
 
 namespace Ignatiusn\SweetAlert\Tests;
 
+use Ignatiusn\SweetAlert\SweetAlertServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Ignatiusn\SweetAlert\SweetAlertServiceProvider;
 
 class TestCase extends Orchestra
 {

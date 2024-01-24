@@ -2,9 +2,9 @@
 
 namespace Ignatiusn\SweetAlert;
 
+use Ignatiusn\SweetAlert\Commands\SweetAlertCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Ignatiusn\SweetAlert\Commands\SweetAlertCommand;
 
 class SweetAlertServiceProvider extends PackageServiceProvider
 {
