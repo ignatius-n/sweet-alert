@@ -7,8 +7,8 @@ interface SessionStore
     /**
      * Flash some data into the session.
      *
-     * @param $name
-     * @param $data
+     * @param  $name
+     * @param  $data
      */
     public function flash(string $key, $value = true);
 

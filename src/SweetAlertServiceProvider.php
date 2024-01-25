@@ -21,9 +21,9 @@ class SweetAlertServiceProvider extends PackageServiceProvider
             ->hasViews()
             // ->hasMigration('create_sweet-alert_table')
             // ->hasCommand(SweetAlertCommand::class);
-            ->hasInstallCommand(function(SweetAlertCommand $command) {
+            ->hasInstallCommand(function (SweetAlertCommand $command) {
                 $command
-                    ->startWith(function(SweetAlertCommand $command) {
+                    ->startWith(function (SweetAlertCommand $command) {
                         $command->info('Hello, and welcome to my sweet alert PHP package!');
                     })
                     ->publishConfigFile()
@@ -32,15 +32,11 @@ class SweetAlertServiceProvider extends PackageServiceProvider
                     // ->askToRunMigrations()
                     // ->copyAndRegisterServiceProviderInApp()
                     ->askToStarRepoOnGitHub('ignatius-n/sweet-alert')
-                    ->endWith(function(SweetAlertCommand $command) {
+                    ->endWith(function (SweetAlertCommand $command) {
                         $command->info('Have a great day!');
                     });
             });
     }
-
-
-
-
 
     /**
      * Register the service provider.

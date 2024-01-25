@@ -18,9 +18,6 @@ class LaravelSessionStore implements SessionStore
 
     /**
      * Flash some data into the session.
-     *
-     * @param string $key
-     * @param $value
      */
     public function flash(string $key, $value = true)
     {
@@ -37,4 +34,3 @@ class LaravelSessionStore implements SessionStore
         $this->session->forget($keys);
     }
 }
-

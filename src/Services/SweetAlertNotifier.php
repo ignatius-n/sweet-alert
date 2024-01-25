@@ -5,8 +5,11 @@ namespace Ignatiusn\SweetAlert\Services;
 class SweetAlertNotifier
 {
     const ICON_WARNING = 'warning';
+
     const ICON_ERROR = 'error';
+
     const ICON_SUCCESS = 'success';
+
     const ICON_INFO = 'info';
 
     /**
@@ -31,8 +34,6 @@ class SweetAlertNotifier
 
     /**
      * Create a new SweetAlertNotifier instance.
-     *
-     * @param \Ignatiusn\SweetAlert\Services\SessionStore $session
      */
     public function __construct(SessionStore $session)
     {
@@ -63,10 +64,9 @@ class SweetAlertNotifier
      *
      * By default the alert is not typed.
      *
-     * @param string $text
-     * @param string $title
-     * @param string $icon
-     *
+     * @param  string  $text
+     * @param  string  $title
+     * @param  string  $icon
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function message($text = '', $title = null, $icon = null)
@@ -81,15 +81,15 @@ class SweetAlertNotifier
             $this->config['icon'] = $icon;
         }
         $this->flashConfig();
+
         return $this;
     }
 
     /**
      * Display a not typed alert message with a text and a title.
      *
-     * @param string $text
-     * @param string $title
-     *
+     * @param  string  $text
+     * @param  string  $title
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function basic($text, $title)
@@ -102,9 +102,8 @@ class SweetAlertNotifier
     /**
      * Display an info typed alert message with a text and an optional title.
      *
-     * @param string $text
-     * @param string $title
-     *
+     * @param  string  $text
+     * @param  string  $title
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function info($text, $title = '')
@@ -117,9 +116,8 @@ class SweetAlertNotifier
     /**
      * Display a success typed alert message with a text and an optional title.
      *
-     * @param string $text
-     * @param string $title
-     *
+     * @param  string  $text
+     * @param  string  $title
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function success($text, $title = '')
@@ -132,9 +130,8 @@ class SweetAlertNotifier
     /**
      * Display an error typed alert message with a text and an optional title.
      *
-     * @param string $text
-     * @param string $title
-     *
+     * @param  string  $text
+     * @param  string  $title
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function error($text, $title = '')
@@ -147,9 +144,8 @@ class SweetAlertNotifier
     /**
      * Display a warning typed alert message with a text and an optional title.
      *
-     * @param string $text
-     * @param string $title
-     *
+     * @param  string  $text
+     * @param  string  $title
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function warning($text, $title = '')
@@ -162,8 +158,7 @@ class SweetAlertNotifier
     /**
      * Set the duration for this alert until it autocloses.
      *
-     * @param int $milliseconds
-     *
+     * @param  int  $milliseconds
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function autoclose($milliseconds = null)
@@ -178,8 +173,7 @@ class SweetAlertNotifier
     /**
      * Add a confirmation button to the alert.
      *
-     * @param string $buttonText
-     *
+     * @param  string  $buttonText
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function confirmButton($buttonText = 'OK', $overrides = [])
@@ -192,9 +186,8 @@ class SweetAlertNotifier
     /**
      * Add a cancel button to the alert.
      *
-     * @param string $buttonText
-     * @param array  $overrides
-     *
+     * @param  string  $buttonText
+     * @param  array  $overrides
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function cancelButton($buttonText = 'Cancel', $overrides = [])
@@ -207,10 +200,9 @@ class SweetAlertNotifier
     /**
      * Add a new custom button to the alert.
      *
-     * @param string $key
-     * @param string $buttonText
-     * @param array  $overrides
-     *
+     * @param  string  $key
+     * @param  string  $buttonText
+     * @param  array  $overrides
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function addButton($key, $buttonText, $overrides = [])
@@ -233,8 +225,7 @@ class SweetAlertNotifier
     /**
      * Toggle close the alert message when clicking outside.
      *
-     * @param string $buttonText
-     *
+     * @param  string  $buttonText
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function closeOnClickOutside($value = true)
@@ -247,8 +238,7 @@ class SweetAlertNotifier
     /**
      * Make this alert persistent with a confirmation button.
      *
-     * @param string $buttonText
-     *
+     * @param  string  $buttonText
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function persistent($buttonText = 'OK')
@@ -275,8 +265,7 @@ class SweetAlertNotifier
     /**
      * Make Message HTML view.
      *
-     * @param bool|true $html
-     *
+     * @param  bool|true  $html
      * @return \Ignatiusn\SweetAlert\Services\SweetAlertNotifier $this
      */
     public function html()

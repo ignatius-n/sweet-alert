@@ -1,16 +1,15 @@
 <?php
 
-    if(! function_exists('swal'))
+if (! function_exists('swal')) {
+    function swal($title = null, $message = null, $icon = null): mixed
     {
-        function swal($title = null, $message = null, $icon = null): mixed
-        {
-            // return view('components.swal', compact('title', 'text', 'icon'));
-            $notifier = app('ignatius-n.sweet-alert');
+        // return view('components.swal', compact('title', 'text', 'icon'));
+        $notifier = app('ignatius-n.sweet-alert');
 
-            if (! is_null($message)) {
-                return $notifier->message($message, $title);
-            }
-
-            return $notifier;
+        if (! is_null($message)) {
+            return $notifier->message($message, $title);
         }
+
+        return $notifier;
     }
+}

@@ -9,9 +9,7 @@ class ConvertMessagesIntoSweetAlert
     /**
      * Handle an incoming request.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \Closure                 $next
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return mixed
      */
     public function handle($request, Closure $next)
@@ -52,7 +50,6 @@ class ConvertMessagesIntoSweetAlert
     /**
      * Retrieve the errors from ViewErrorBag.
      *
-     * @param $errors
      *
      * @return string
      */
@@ -63,4 +60,3 @@ class ConvertMessagesIntoSweetAlert
         return $errors->flatten()->implode('<br />');
     }
 }
-
