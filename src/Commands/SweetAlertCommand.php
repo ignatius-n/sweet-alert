@@ -6,9 +6,9 @@ use Illuminate\Console\Command;
 
 class SweetAlertCommand extends Command
 {
-    public $signature = 'sweet-alert';
+    public $signature = 'sweet-alert:install';
 
-    public $description = 'My command';
+    public $description = 'Install package and configure sweet alert';
 
     public function handle(): int
     {
